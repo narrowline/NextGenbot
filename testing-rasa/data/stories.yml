@@ -1,0 +1,86 @@
+version: "3.1"
+
+stories:
+  - story: ask price for dress
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_price
+      - action: utter_ask_suit_name_code
+      - intent: affrim_suit
+        entities:
+          - suit_name: "Royal Blue Suit"
+          - suit_id: 1002
+      - slot_was_set:
+          - suit_name: "Royal Blue Suit"
+          - suit_id: 1002
+      - action: utter_confirmation_suit
+      - intent: affirm
+      - action: utter_request_to_check
+      - action: action_check_suit_availability
+      - checkpoint: check_suit_availability
+
+  - story: place order
+    steps:
+      - checkpoint: check_suit_availability
+      - intent: place_order
+      - action: utter_ask_size
+      - intent: inquire_size
+        entities:
+          - size: "XL"
+      - slot_was_set:
+          - size: "XL"
+      - action: utter_confirmation_suit_size
+      - intent: affirm
+      - action: utter_ask_payment_method
+      - intent: affirm_payment_method
+        entities:
+          - payment_method: "cash on delivery"
+      - slot_was_set:
+          - payment_method: "cash on delivery"
+      - action: utter_ask_address
+      - intent: affirm_address
+        entities:
+          - address: "Lahore, Badshai masijid"
+      - slot_was_set:
+          - address: "Lahore, Badshai masijid"
+      - action: utter_ask_phone_number
+      - intent: affirm_phone_number
+        entities:
+          - phone_number: "03001234567"
+      - slot_was_set:
+          - phone_number: "03001234567"
+      - action: utter_confirmation_order
+      - intent: affirm
+      - action: action_place_order
+
+
+
+  - story: bye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+
+  - story: track Order 
+    steps: 
+      - intent: ask_order_status
+      - action: utter_ask_id
+      - intent: affrim_id
+        entities:
+          - order_id: "8199a72c-28b7-4930-ba37-6c86de3b56b1"
+      - slot_was_set:
+          - order_id: "8199a72c-28b7-4930-ba37-6c86de3b56b1"
+      - action: action_track_order
+  
+  - story: user don't talk
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: shutdown
+      - intent: deny
+      - action: utter_not_problem
+
+
+
+

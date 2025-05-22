@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hover-effect:hover {
+            background-color: #f3f4f6;
+            transform: scale(1.02);
+            transition: all 0.3s ease;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #4b6cb7, #182b49);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-100 to-gray-200 font-sans">
+    <!-- Navigation Bar -->
+    <nav class="bg-blue-900 text-white p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h2 class="text-2xl font-bold gradient-text">NextGen Order Management</h2>
+            <div>
+                <a href="#" class="mr-4 hover:text-blue-300">Home</a>
+                <a href="#" class="hover:text-blue-300">Orders</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mx-auto p-6">
+        <h1 class="text-4xl font-extrabold mb-6 text-center gradient-text">🧾 All Orders Dashboard</h1>
+
+        <!-- Buttons -->
+        <div class="flex justify-between mb-6">
+            <button class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 hover-effect">
+                🔄 Refresh
+            </button>
+            <button class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 hover-effect">
+                ⬇️ Export to Excel
+            </button>
+        </div>
+
+        <!-- Orders Table -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <table class="min-w-full text-gray-700">
+                <thead class="bg-blue-900 text-white">
+                    <tr>
+                        <th class="py-3 px-6 text-left">Order ID</th>
+                        <th class="py-3 px-6 text-left">Suit</th>
+                        <th class="py-3 px-6 text-left">Size</th>
+                        <th class="py-3 px-6 text-left">Payment</th>
+                        <th class="py-3 px-6 text-left">Address</th>
+                        <th class="py-3 px-6 text-left">Phone</th>
+                        <th class="py-3 px-6 text-left">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-b hover:bg-gray-50 hover-effect">
+                        <td class="py-4 px-6">8199a72c-28b7-4930-ba37-6c86de3b56b1</td>
+                        <td class="py-4 px-6">royal blue tuxedo</td>
+                        <td class="py-4 px-6">M</td>
+                        <td class="py-4 px-6">cash on delivery</td>
+                        <td class="py-4 px-6">Badshai masijid</td>
+                        <td class="py-4 px-6">03004156781</td>
+                        <td class="py-4 px-6 text-yellow-600 font-semibold">pending</td>
+                    </tr>
+                    <tr class="border-b hover:bg-gray-50 hover-effect">
+                        <td class="py-4 px-6">b98c5608-c2fc-4a6a-8245-bcf6cbc05c72</td>
+                        <td class="py-4 px-6">Grey Formal Suit</td>
+                        <td class="py-4 px-6">small</td>
+                        <td class="py-4 px-6">cash on delivery</td>
+                        <td class="py-4 px-6">Karachi , Pakistan</td>
+                        <td class="py-4 px-6">03004311231</td>
+                        <td class="py-4 px-6 text-yellow-600 font-semibold">Delivered</td>
+                    </tr>
+                    <tr class="border-b hover:bg-gray-50 hover-effect">
+                        <td class="py-4 px-6">d350e212-deb3-4142-afe0-620628e20c19</td>
+                        <td class="py-4 px-6">Red bridal Suit</td>
+                        <td class="py-4 px-6">small</td>
+                        <td class="py-4 px-6">Bank payment</td>
+                        <td class="py-4 px-6">USA texas</td>
+                        <td class="py-4 px-6">1 (920) 268-7460</td>
+                        <td class="py-4 px-6 text-yellow-600 font-semibold">Recevied</td>
+                    </tr>
+                    <tr class="border-b hover:bg-gray-50 hover-effect">
+                        <td class="py-4 px-6">d252fe93-794e-4fd7-8940-25447ba82982</td>
+                        <td class="py-4 px-6">Classic Black Suit</td>
+                        <td class="py-4 px-6">medium</td>
+                        <td class="py-4 px-6">Bank payment</td>
+                        <td class="py-4 px-6">Faisalabad Factory Area</td>
+                        <td class="py-4 px-6">03001319871</td>
+                        <td class="py-4 px-6 text-yellow-600 font-semibold">pending</td>
+                    </tr>
+                    <tr class="border-b hover:bg-gray-50 hover-effect">
+                        <td class="py-4 px-6">95848a6a-31cd-4255-9652-c7b0878215ea</td>
+                        <td class="py-4 px-6">Casual ornage</td>
+                        <td class="py-4 px-6">medium</td>
+                        <td class="py-4 px-6">cash on delivery</td>
+                        <td class="py-4 px-6">masijd,Lahore</td>
+                        <td class="py-4 px-6">03001319871</td>
+                        <td class="py-4 px-6 text-yellow-600 font-semibold">pending</td>
+                    </tr>
+                    <tr class="border-b hover:bg-gray-50 hover-effect">
+                        <td class="py-4 px-6">58cd4efa-c78b-4c38-b69c-36e86ae68cff</td>
+                        <td class="py-4 px-6">Yellow bridle suit</td>
+                        <td class="py-4 px-6">large</td>
+                        <td class="py-4 px-6">cash on delivery</td>
+                        <td class="py-4 px-6">Uk glassgow near 40 street</td>
+                        <td class="py-4 px-6">03001319871</td>
+                        <td class="py-4 px-6 text-yellow-600 font-semibold">pending</td>
+                    </tr>
+                    <tr class="border-b hover:bg-gray-50 hover-effect">
+                        <td class="py-4 px-6">953c4d9f-d4fe-4014-9425-dde5f1e4129b</td>
+                        <td class="py-4 px-6">Classic Black Suit</td>
+                        <td class="py-4 px-6">small</td>
+                        <td class="py-4 px-6">cash on delivery</td>
+                        <td class="py-4 px-6">Usa californa</td>
+                        <td class="py-4 px-6">03001319871</td>
+                        <td class="py-4 px-6 text-yellow-600 font-semibold">pending</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

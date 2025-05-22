@@ -1,0 +1,26 @@
+[
+  {
+    "name": "order_id",
+    "pattern": "[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}"
+  },
+  {
+    "name": "phone_number",
+    "pattern": "\\d{11}"
+  },
+  {
+    "name": "suit_id",
+    "pattern": "\\d{4}"
+  },
+  {
+    "name": "suit_name",
+    "pattern": "(\\bClassic\\ Black\\ Suit\\b|\\bGrey\\ Formal\\ Suit\\b|\\bNavy\\ Blue\\ Suit\\b|\\bElegant\\ Grey\\ Suit\\b|\\bMustard\\ Blach\\ Suit\\b)"
+  },
+  {
+    "name": "suit_id",
+    "pattern": "(\\b1234\\b|\\b2345\\b|\\b3456\\b|\\b4567\\b|\\b1122\\b|\\b3212\\b)"
+  },
+  {
+    "name": "phone_number",
+    "pattern": "(\\b03451234567\\b|\\b03005423524\\b|\\b03104354691\\b|\\b03001002001\\b|\\b03543412345\\b)"
+  }
+]

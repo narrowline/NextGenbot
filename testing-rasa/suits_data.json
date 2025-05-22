@@ -1,0 +1,99 @@
+{
+    "suits": [
+      {
+        "suit_id": "1001",
+        "suit_name": "Classic Black Suit",
+        "size": ["S", "M", "L", "XL"],
+        "color": "Black",
+        "price": 15000,
+        "availability": true,
+        "image_url": "https://imgur.com/VWCfOjh"
+      },
+      {
+        "suit_id": "1002",
+        "suit_name": "Royal Blue Tuxedo",
+        "size": ["M", "L", "XL"],
+        "color": "Blue",
+        "price": 18000,
+        "availability": true,
+        "image_url": "https://imgur.com/Da5r6e5"
+      },
+      {
+        "suit_id": "1003",
+        "suit_name": "Grey Formal Suit",
+        "size": ["S", "M", "L"],
+        "color": "Grey",
+        "price": 16000,
+        "availability": false,
+        "image_url": "https://imgur.com/OJUoSN2"
+      },
+      {
+        "suit_id": "1004",
+        "suit_name": "White Wedding Suit",
+        "size": ["M", "L"],
+        "color": "White",
+        "price": 20000,
+        "availability": true,
+        "image_url": "https://imgur.com/RzVI4G0"
+      },
+      {
+        "suit_id": "1005",
+        "suit_name": "Maroon Velvet Blazer",
+        "size": ["S", "M", "L", "XL"],
+        "color": "Maroon",
+        "price": 22000,
+        "availability": true,
+        "image_url": "https://imgur.com/tjmUjyW"
+      },
+      {
+        "suit_id": "1006",
+        "suit_name": "Maroon kurta",
+        "size": ["S", "M", "L", "XL"],
+        "color": "Maroon",
+        "price": 22000,
+        "availability": true,
+        "image_url": "https://imgur.com/sJ3Mf6h"
+      },
+      {
+        "suit_id": "1007",
+        "suit_name": "black classics",
+        "size": ["S", "M", "L", "XL"],
+        "color": "Maroon",
+        "price": 22000,
+        "availability": true,
+        "image_url": "https://imgur.com/UZ1h5TL"
+      },
+      {
+        "suit_id": "1008",
+        "suit_name": "Blue kurta with troser",
+        "size": ["S", "M", "L", "XL"],
+        "color": "Maroon",
+        "price": 22000,
+        "availability": true,
+        "image_url": "https://imgur.com/bypAt6C"
+      },
+      {
+        "suit_id": "1009",
+        "suit_name": "black classics",
+        "size": ["S", "M", "L", "XL"],
+        "color": "Maroon",
+        "price": 22000,
+        "availability": true,
+        "image_url": "https://imgur.com/x6HDnmP"
+      },
+      {
+        "suit_id": "1010",
+        "suit_name": "black classics",
+        "size": ["S", "M", "L", "XL"],
+        "color": "Maroon",
+        "price": 22000,
+        "availability": true,
+        "image_url": "https://imgur.com/0vM88nh"
+      }
+      
+      
+      
+      
+      
+    ]
+  }

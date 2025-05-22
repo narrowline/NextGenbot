@@ -1,0 +1,14 @@
+# Virtual Environment
+.rasaenv/
+fastapienv/
+venv/
+env/
+.env/
+.venv/
+ENV/
+
+# Python
+*.pyc
+__pycache__/
+*.py[cod]
+*$py.class

@@ -1,0 +1,131 @@
+version: '3.1'
+intents:
+- affirm
+- affrim_suit
+- ask_price
+- deny
+- goodbye
+- greet
+- shutdown
+- place_order
+- inquire_size
+- affirm_payment_method
+- affirm_address
+- affirm_phone_number
+- affrim_id
+- ask_order_status
+entities:
+- suit_name
+- suit_id
+- address
+- phone_number
+- size
+- payment_method
+- order_id
+slots:
+  suit_name:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: suit_name
+  order_id:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: order_id
+  suit_id:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: suit_id
+  payment_method:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: payment_method
+  address:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: address
+  phone_number:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: phone_number
+  size:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: size
+actions:
+  - action_check_suit_availability
+  - action_place_order
+  - action_track_order
+
+
+responses:
+  utter_greet:
+    - text: "Kesa ho mai ap ki kia madad krh sakta hun?"
+    - text: "AP ki kia madad krh satka hun let me know."
+    - text: "Hi, how i can help you?"
+    - text: "G ap batain apko kon sa dress pasand aya?"
+  utter_ask_suit_name_code: 
+    - text: "Ap mujhe suit ka naam ya uski ID bata dijiye."
+    - text: "Suit ka naam ya ID de sakte hain?"
+    - text: "Agar suit ka naam bata dein toh behtar guide kar sakunga."
+  utter_confirmation_suit: 
+    - text: "Kia ap {suit_name} or suit id {suit_id} ki bt krh rahain hain?"
+    - text: "G kia ap {suit_name} or suit id {suit_id} ka barha mai jana jata hain?"
+    - text: "Are ask about {suit_name} or suit id {suit_id}?"
+  utter_not_problem:
+    - text: "G koi masla nhi?"
+    - text: "Koi bt nhi mai smjh sakta hun"
+    - text: "Jesa AP KI marzi..."
+    - text: "Smjh sakta hun paisa nhi honh gain suit lena kai gusa jaiz hai 🤗"
+  utter_request_to_check:
+    - text: "Database sa check krh raha hun thora w8 karain."
+    - text: "Please wait a moment."
+    - text: "Checking stay here."
+    - text: "Bs 2 sec dain let me check."
+  utter_ask_size: 
+    - text: "G mam but ap mujha size confirm krh dain mai dekhta hun."
+    - text: "Kis size mai ap ko order krna hai."
+    - text: "Size confirm krh dain please."
+  utter_confirmation_suit_size: 
+    - text: "Kia ap {suit_name} or suit size {size} mai order krna cahti hain"
+    - text: " Kia ma {suit_name} ka size {size} mai ya order krh doh?"
+  utter_ask_payment_method:
+
+    - text: "Mam apko order krna sai phela payment method batana parha gaah ap cash on delivery or online bhi payment krh sati hain (digital wallets or bank transfer ) bhi available hai"
+    - text: "Payment method confirm krh dain please ?"
+  utter_ask_address:
+    - text: "Mam please apna address bata dijiye."
+    - text: "Address confirm krh dain please ?"
+  utter_ask_phone_number:
+    - text: "Mam please apna phone number bata dijiye."
+    - text: "Phone number confirm krh dain please ?"
+  utter_confirmation_order: 
+    - text: "Mam ap na {suit_name} ka {size} size mai order kia hai apka current address {address} and phone number {phone_number} hai mai apka order confirm krh doh (yes/no)."
+  utter_ask_id: 
+    - text: "Mam ! Ap apni order confirm karh dain mai check karh kai batata hun."
+    - text: "G mai check krta hun apni order id confirm karin please."
+    - text: "Agr ap order id bata dain toh main abhi check krh kai bata deta hun agr yad nhi toh toh ap coustmer support sa pochna parna"
+  
+  utter_goodbye:
+    - text: "Bye"
+    - text: "Allah hafiz"
+    - text: "Ameed hai ap dobara visit karain gain."
+    - text: "Mujha umeed hai ap dobara visit karain gain ,BYE."
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

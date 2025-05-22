@@ -1,0 +1,305 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hello
+    - koi hai
+    - baat sunain
+    - salam
+    - assalam o alaikum
+    - walikum salam
+    - hi
+    - hey
+    - kya haal hai?
+    - kaisay ho?
+    - koi hai idhar?
+    - mujhe madad chahiye
+    - suno
+    - excuse me
+    - kya aap meri help kar sakte hain?
+    - kon hai wahan?
+    - koi online hai?
+    - bhai suno
+    - madad chahiye
+    - Hello there
+    - Can i get help
+    - Hi, how are u
+    - Can someone listen me?
+    - Is someone there?
+    - Gotcha
+    - Aoa
+    - Can u help me please?
+    - kesa ho
+- intent: goodbye
+  examples: |
+    - thik hai shukria bye
+    - bye
+    - Allah Hafiz
+    - phir miltay hain
+    - khuda hafiz
+    - acha chalta hoon
+    - chalo phir
+    - phir baat hoti hai
+    - miltay hain dobara
+    - abhi mujhe jana hai
+    - phir mulaqat hogi
+    - acha bhai, Allah Hafiz
+    - okay bye
+    - take care
+    - chalta hoon
+    - rukhta hoon phir
+    - abhi ke liye alvida
+    - miltay hain next time
+- intent: affirm
+  examples: |
+    - haan
+    - haan ji
+    - bilkul
+    - haan bhai
+    - haan isi ki bt krh raha hun
+    - haan sahi hai
+    - theek hai
+    - haan mujhe pasand aaya
+    - haan yeh sahi hai
+    - haan lena hai
+    - haan order karna hai
+    - haan confirm kar do
+    - haan mujhe chahiye
+    - haan yeh budget mein hai
+    - perfect hai
+    - sahi hai bhai
+    - done
+    - okay
+    - hanji
+    - mujhe yeh pasand aaya
+    - best choice hai
+    - G bilkul
+- intent: deny
+  examples: |
+    - nahi
+    - nahi koi or dekhao
+    - nahin ji
+    - no way
+    - bilkul nahi
+    - mujhe nahi chahiye
+    - rehne do
+    - iski zaroorat nahi hai
+    - nahi lena mujhe
+    - mehnga hai, nahi lena
+    - soch ke bataungi
+    - abhi nahi
+    - baad mein dekhti hoon
+    - filhal nahi
+- intent: ask_price
+  examples: |
+    - Yeh dress kitne ka hai?
+    - Price kya hai is suit ki?
+    - Axha yr mujha is suit ki prices bata doh.
+    - Yr mujha ya wala dress pasand hai ya kitna kai hai .
+    - Ya suit mujha resanable lagh raha hai is ka kia prices hain.
+    - Ya suit kitna ka mila gaah mujha .
+    - Kia ap is outfit ka price bata sakta hain mujha.
+    - Mujha is suit kai actual price batain.
+    - Ap mujha is article kai price bata dain mujha isa buy krna hai .
+    - Kia ap ko is dress ki price pata hai?
+    - Is article kai price kithni range tak honh gain
+    - Is ki suit mai trouser bhi sath hi mila gah
+    - mujha is ki akel kameez kai price ata doh
+    - Amm yr ya suit mujha mhenga laagh raha let me know kai ma sahi soch rahi.
+    - Kia dress hai mujha yahi chahye .
+    - Price please
+    - Do you have prices for this one?
+    - I really like it i wanna buy.
+    - I want to grab this outfit can you tell me the price?
+    - Amazing dress but for me please.
+    - Can i get prices for this dress?
+    - Ammm its look like expensive just proof me wrong.
+    - I suddenly attract this dress i wanna buy this one.
+    - yr mujha is suit ki price bata dena
+- intent: place_order
+  examples: |
+    - Mujhe yeh dress order karna hai
+    - Iska order place kar do
+    - Checkout ka process kya hai?
+    - Mera lia ya order krh doh
+    - Awesome thik hai reasonable price hai order confirm krh doh please
+    - Hn ghr bejh doh ya 
+    - Axha please isa order krh doh is sa phela sold out ho jaya 
+    - Kia mujha iska ak piece mila gaah
+    - Hmmmm yrr ya suit mujha pasand hai mujha chahye 
+    - Agar mujhe exchange karna ho toh kya process hai?
+    - Order confirm ho gaya ya nahi?
+    - Yeh order mujhe urgent chahiye, express delivery possible hai?
+    - Order place karo mera
+    - Mujha isi color mai chahye order place karo 2 din mai delivery chahiye.
+    - Axha abh mama manh gai abh bejha doh isa😂.
+    - Amm chalo or koi nhi toh yahi hi sai confirm karo 
+    - Mujha [blue embroidered suit](suit_name) order karna hai kia tum krh doh gai 
+    - Mujha [green maxi dress](suit_name)  suit [small](size) mai order karna hai kia tum krh doh gai
+- intent: inquire_size    
+  examples: |
+    - Mujhe is suit ka [XXL](size) chahiye, stock hai?
+    - Mera [S](size) size hai
+    - Hmm mujha [M](size) size ka kapra fit ata hain.
+    - Mujhe [L](size) size chahiye, please check karke batao.
+    - Mera size [L](size) hai or mujha large hi chahye
+    - Kya [extra large](size) size stock mein hai?
+    - [XXXL](size) size available hai?
+    - Kya yeh [double XL](size) size mein aayega?
+    - Mera lia toh [double XXL](size) hi thik raha gaah
+    - Amm mera weight loose huwa hai to i think [medium](size) hi thik raha gaah.
+    - Yr mera mujha ya suit [m](size) mai chahye 
+- synonym: large
+  examples: |
+    - Large
+    - L
+    - XL  
+    - extra large
+    - XXL  
+
+- synonym: small
+  examples: |
+    - small
+    - S
+    - XS  # Extra small add kiya
+- synonym: medium
+  examples: |
+    - medium
+    - M
+    - m
+- intent: affirm_address
+  examples: |
+    - Hn address not krh loh [Faisalabad,satayan road](address)
+    - Mera address bht naughty ho chalo kher likh loh [Karachi, Gulbhar colony](address)
+    - Yr yahan [Faisalabad,Muslim town](address) lai ana 
+    - Hn tumhara pas hi [lahore, DHA](address) hi rehti hun
+    - Yr [Karachi, kizra masijid](address) mai delivery ho jaya gi naah 
+    - [Faisalabad, satayan road](address) okay
+    - [Sindh, Molana road](address)
+    - Yr mashoor shar [Multan, Jinnah road](address) hai mera address
+    - Address tha [Lahore, DHA](address)
+    - Address note krh loh axha sa kisi galth jagha nah dai ana [Lahore,Badshai masijid](address)
+    - G bilkul mera address hai [Peshawar, Shahid road](address)
+- intent: affirm_payment_method
+  examples: |
+    - Mujhe [cash on delivery](payment_method) chahiye
+    - Mai [online payment](payment_method) karo gaah.
+    - Mai [bank transfer](payment_method) karh deti hun okay
+    - Yr [cash on delivery](payment_method) method is the best hai 😂?
+    - Yr online hi krh deta hun thori derh tak tum confirm karo order 
+    - Hn dekhta hun [cash on delivery](payment_method) hi krh deti hun
+    - Dekho mujha 3 din tak paisa milna toh [cash on delivery](payment_method) hi krh donh gain.
+    - Axha [bank transfer](payment_method) krti hun...
+    - Mai [credit card](payment_method) se payment karunga.
+    - Mujhe [debit card](payment_method) ka option chahiye.
+    - [JazzCash](payment_method) se transfer kar sakti hun?
+    - [Easypaisa](payment_method) best hai mere liye, wohi kar doon?
+    - Order confirm kardo, mai [cash on delivery](payment_method) choose kar raha hoon.
+    - [Online transfer](payment_method) kar dungi, account details send kar do.
+    - Payment ka scene ye hai ke mai [bank transfer](payment_method) kar sakta hoon.
+    - Mujhe abhi [credit card](payment_method) ka access nahi hai, koi aur option?
+    - [Easypaisa](payment_method) se 5 baje tak transfer kar dungi, order hold kar do.
+    - [JazzCash](payment_method) se paisa bhej diya hai, check kar lo.
+    - Payment confirm ho gai hai, mai [bank transfer](payment_method) kar chuka hoon.
+    - Pichli dafa [cash on delivery](payment_method) ki thi, is dafa bhi wohi theek hai.
+- intent: shutdown
+  examples: |
+    - Mujha bt nhi karni.
+    - Mujha tumhari zaroorat nhi.
+    - Bakwas nah karo chup ho jaya.
+    - Mujha kisi kisam ki help nhi chahye.
+    - Tum toh apni madad nhi krh sakta bot.
+    - Chup karo mujha na seekhao.
+    - Bap ko seekhata ho.
+- intent: affrim_suit
+  examples: |
+    - main [red bridal suit](suit_name) ki bt krh rahi hun
+    - Yr mai ya [blue embroidered suit](suit_name) ki bt krh rahi hun is ka code i guess [1234](suit_id) hai
+    - Suit nme [blue embroidered suit](suit_name) hai or code [1234](suit_id) hai
+    - Let me check  [royal blue tuxedo](suit_name) or code maybe [1122](suit_id) hai
+    - hn is suit ki id hai [1253](suit_id)
+    - haan yr ya black color ka suit [Grey Formal Suit](suit_name) chahiye
+    - mujhe yahi [blue embroidered suit](suit_name) chahiye
+    - Yr ya jo [2345](suit_id) wala suit hai mujhe chahiye
+    - Ya samne hi hai [Gul ahmed special](suit_name) abhi recent hi launch huwa hai ya article.
+    - Mera ko is ki id toh nhi pata hn lakin is ka name i guess [Neavy Blue Z](suit_name) hai
+    - Let me know kai [7865](suit_id) wala suit ki price batao mujha.
+    - I think its [1122](suit_id) code for this outfit .
+    - I don't ohh i find its [Royal Blue Tuxedo](suit_name).
+    - Can you find a price of [3452](suit_id) ?
+    - yr ya [2345](suit_id) wala suit
+    - mujha [1234](suit_id) hai ?
+    - ji haan, [7865](suit_id) wala suit
+    - mujhe [green maxi dress](suit_name) ka price batao
+    - Yr mai ya [Classic Black Suit](suit_name) ki bt krh rahi hun [1001][{"entity": "suit_id"},] wala
+- regex: suit_id
+  examples: |
+    - \d{4}
+- lookup: suit_name
+  examples: |
+    - Classic Black Suit
+    - Grey Formal Suit
+    - Navy Blue Suit
+    - Elegant Grey Suit
+    - Mustard Blach Suit
+- lookup: suit_id
+  examples: |
+    - 1234
+    - 2345
+    - 3456
+    - 4567
+    - 1122
+    - 3212
+- intent: affirm_phone_number
+  examples: |
+    - Yr mera number [03451234567](phone_number) hai
+    - Note krh loh mera number [03651534463](phone_number) hai
+    - [03011431567](phone_number) 
+    - Axha mera number [03451234567](phone_number) ya mera whatsapp ka number bhi hai toh ispa bhi contact krh sakta honh
+    - aik min hn [03564345127](phone_number) hai
+- lookup: phone_number
+  examples: |
+    - 03451234567
+    - 03005423524
+    - 03104354691
+    - 03001002001
+    - 03543412345
+- regex: phone_number
+  examples: |
+    - \d{11}
+
+- intent: ask_order_status
+  examples: |
+    - yr abhi tak order nhi poncha kia status hai 
+    - Bhai suit kabh tak aya gah 2 din ho gaya order kiya huwa koh
+    - Excuse me order q nhi aya abhi tak
+    - Mujha order chahye mera kal tak
+    - Order kabh tak bejho gai 2 din ho gaya hain
+    - Had hai mai na kaha bhi tah kal tak bejh dena or tum na nhi bejha
+    - Or kithna time lagha gaah delivery mai.
+    - i think abh tak toh delivery a jani chahye.
+    - mera order kal kal tak a jaya gaah 
+    - Abhi bhi order pending mai hai ?
+    - Order deliver krh dia hai ya pending hai abhi
+    - Mujha mera order kabh tak receive ho gaah
+    - Kia kal tak mera parsal mujha mil jaya gaah?
+    - Agr meri suit ready hai toh bejh doh
+- synonym: order 
+  examples: |
+    - parsal
+    - order
+    - delivery
+    
+
+- intent: affrim_id
+  examples: |
+      - Hn meri id [8199a72c-28b7-4930-ba37-6c86de3b56b1](order_id) hai abh check karo 
+      - [9981a28c-72b7-4930-ba86-6cde373b56b1](order_id)
+      - Hn mujha exact toh yaad nhi lakin i think [5277a91c-81b7-9403-ba56-5c91de3b56b1](order_id)
+      - Mera order ID [123e4567-e89b-12d3-a456-426614174000](order_id) hai  # Added
+      - ID yeh hai [987fcdeb-12ab-34cd-56ef-789101234567](order_id)  # Added
+      - Check karo na, ID [456de789-ab12-cd34-ef56-1234567890ab](order_id) hai  # Added
+
+- regex: order_id
+  examples: |
+      - [0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}

@@ -1,0 +1,49 @@
+rasa-project/
+├── .github/                      # GitHub Actions workflows
+│   └── workflows/
+│       ├── ci.yml
+│       └── cd.yml
+├── backend-fastapi/             # FastAPI backend service
+│   ├── src/
+│   │   ├── api/
+│   │   │   ├── __init__.py
+│   │   │   ├── endpoints.py
+│   │   │   └── models.py
+│   │   ├── core/
+│   │   │   └── config.py
+│   │   └── main.py
+│   ├── tests/
+│   ├── Dockerfile.fastapi
+│   └── requirements.txt
+├── testing-rasa/               # Rasa chatbot service
+│   ├── actions/
+│   │   ├── __init__.py
+│   │   └── actions.py
+│   ├── data/
+│   │   ├── nlu.yml
+│   │   └── stories.yml
+│   ├── tests/
+│   │   ├── test_stories.yml
+│   │   └── conversation_tests.md
+│   ├── config/
+│   │   ├── credentials.yml
+│   │   ├── domain.yml
+│   │   └── endpoints.yml
+│   ├── models/
+│   ├── Dockerfile.rasa
+│   ├── Dockerfile.rasa_action
+│   └── requirements.txt
+├── docker-images/             # Docker composition
+│   ├── docker-compose.yml
+│   ├── docker-compose.prod.yml
+│   └── .env.example
+├── docs/                     # Documentation
+│   ├── api/
+│   ├── deployment/
+│   └── development/
+├── scripts/                  # Utility scripts
+│   ├── setup.sh
+│   └── deploy.sh
+├── .gitignore
+├── README.md
+└── Makefile
